@@ -18,13 +18,13 @@ async function updateStatus() {
 
     if (authAttempt?.suspicious) {
       statusDiv.className = 'status danger';
-      statusMessage.textContent = `⚠️ Warning: Suspicious activity detected on ${domain}`;
+      statusMessage.textContent = `Warning: Suspicious activity detected on ${domain}`;
     } else if (tab.url.startsWith('https://')) {
       statusDiv.className = 'status safe';
-      statusMessage.textContent = `✅ No suspicious activity detected on ${domain}`;
+      statusMessage.textContent = `No suspicious activity detected on ${domain}`;
     } else {
       statusDiv.className = 'status warning';
-      statusMessage.textContent = `⚠️ This site is not using HTTPS`;
+      statusMessage.textContent = `This site is not using HTTPS`;
     }
 
     // Update alert history
